@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <title>Home - WaybackComputing.NET</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>WaybackComputing.NET</h1>
+        <div id="navbar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <a href="osreviews.html">OS Reviews</a>
+                    <a href="mycomputers.html">My Computers</a>
+                    <a href="about.html">About</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <br>
+
+    </header>
+
+
+    <section>
+        <hr>
+
+        <div id="memory">
+            <h2>Messing With Windows 9x's Memory</h2>
+            <h4>April 25, 2023</h4>
+
+            <div id="cbreaker"><img src="images/cbreaker.png" /></div>
+
+            <p>
+                I recently discovered a few weeks ago
+                just how bad the memory protection in Windows 9X actually was. For context, most modern
+                operating systems have some kind of virtualization features to ensure that if a program running
+                crashes or runs dangerous code, it can only mess up the memory that is allocated to the program
+                without damaging any other running programs, or the operating system. I booted up a virtual
+                machine with a copy of Windows 98, and wrote this C code. In a nutshell, this code, in an
+                infinite for loop declares a char pointer at the memory address 0x00010000, sets the value at
+                that address to 0 (so it just deletes whatever was stored at that address), and increments the
+                pointer to the next byte. Normally, any modern operating system would simply give you a
+                segmentation fault error, but not Windows 9X. Running this code on Windows 98 inside VMware
+                gives me mixed results. Sometimes, the screen just goes black. Other times, I get an error like
+                this, perfectly describing what just happened:</p>
+
+            <div id="vmware"><img src="images/0.png" /></div>
+
+
+            <p>It's actually kind of fun to mess with what the value at
+                the pointer is being set to, because instead of replacing everything with 0, here are the
+                results on the screen when you replace everything with 0xFFFFFFFF, the screen turns white instead! </p>
+
+            <div id="vmware"><img src="images/ffffffff.png" /></div>
+
+
+        </div>
+
+        <div id="dialup">
+
+            <h2>Dial-up Internet in 2023?</h2>
+            <h4>April 13, 2023</h4>
+            <p>
+                Can Dial-up internet still exist in 2023? Apparently, the answer is yes. Last summer I managed to
+                get my Dell Dimension e510, with the help of a VOIP box, to accept incoming connections through its
+                dial-up modem and actually provide an internet connection through it! Now, why would you want to
+                do this in 2023? Dial-up internet is basically useless with the internet of today. But if you're
+                into vintage computing like me, there are several reasons why it can be interesting to set something
+                like this up yourself.
+
+                <br>
+
+            <div id="videos">
+                <h4>Dialing up!</h4>
+                <video src="images/dialing.mov" controls></video>
+                <h4>Loading a 2001 snapshot of Microsoft.com</h4>
+                <video src="images/webpage.MOV" controls></video>
+
+            </div>
+
+            <br>
+
+            <ul>
+                <li>
+                    File Transfers: When trying to transfer data between old and new computers, it can be a pain
+                    to have to split a file up, and swap floppy disks every 3-4 minutes. Using the modem instead
+                    may still be slow, but this at least allows for the process of copying files to be more automated.
+                </li>
+                <li>
+                    Vintage Web Browsing: If you load archived web sites from the Internet Archive, you can simulate
+                    what it actually was like to use the internet on a dial-up connection back when they were more
+                    common.
+                </li>
+                <li>
+                    The Sound: It's just neat to listen to in my opinion!
+                </li>
+            </ul>
+            </p>
+        </div>
+
+
+        <br>
+    </section>
+
+</body>
+
+</html>

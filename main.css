@@ -1,0 +1,159 @@
+body{
+    /* Start with a solid aquamarine on the top and progress to white further 
+    down on the page, min-height:100vh to ensure that the linear-gradient stretches
+    across the page and not repeat if there isn't enough content to fill the entire 
+    page in the browser, set the font to 'Courier New', and fall back on Courier, then
+    onto monospace if the first and/or second can't be displayed */
+    background:linear-gradient(to bottom, aquamarine, white);
+    min-height: 100vh;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* box shadow around content */
+body > * {
+    box-shadow:  black -15px 15px 25px,
+                 black 15px 15px 25px;
+}
+
+/* center the title - h1 is only used in the title */
+h1{
+    text-align: center;
+}
+
+#navbar ul{
+    /* Use display:flex to make items appear horizontally, center the content,
+     remove dot from the unordered list, and remove any padding/margin that makes
+     the navigation bar off-center */
+
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar a{
+    /* Create some space between the individual links on the navigation bar, 
+    and remove the underline from the links */
+
+    padding-left: 5px;
+    padding-right:5px;
+    font-size: 16pt;
+    text-decoration: none;
+    font-weight: bold;
+    color:dodgerblue;
+}
+
+#navbar a:hover{
+    /* Make links within the navigation bar appear yellow and have an underline
+    when they are hovered over */
+    color:yellow;
+    text-decoration: underline;
+}
+
+header{
+    /* In the header - Make the text color white, set the background to maroon,
+    make the width 50% and set the margin width automatically to center the 
+    header in the middle of the page, add padding to the top/bottom of the header
+    that is 1% of the resolution the page is being displayed at in the browser, 
+    and set a border radius on the top corners of the header to make them rounded */
+
+    color:white;
+    background-color:maroon;
+    width: 50%;
+    margin:0 auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 20px 20px 0 0;
+}
+
+section{
+    /* In the section,  make the width 50% and set the margin width automatically to center the 
+    section in the middle of the page, set the background color to cornsilk, and set the border
+    radius on the bottom corners to 20px to make bottom corners rounded*/
+
+    width: 50%;
+    margin: 0 auto;
+    background-color:cornsilk;
+    border-radius: 0 0 20px 20px;
+}
+
+section > * {
+    /* All elements immediately inside the section element - there is a 2% padding on them so
+    they don't appear too close to the borders of the section */
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+img{
+    text-align: center;
+    margin:0 auto;
+    width: 320px;
+    height: 240px;
+}
+
+#compimages{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#compimages img{
+    padding:5px;
+}
+
+#tower img{
+    width:180px;
+    height: 320px;
+}
+
+#dimensiontower img{
+    width:auto;
+    height: 320px;
+}
+
+#desktop img{
+    width:auto;
+    height: 320px;
+}
+
+#cbreaker img{
+    width:auto;
+    height: 180px;
+}
+
+#vmware img{
+    width:auto;
+    height: auto;
+}
+
+div{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#dialup{
+    text-align: left;
+}
+#videos video{
+    width:480px;
+    height:auto;
+}
+
+p{
+    text-align:left;
+}
+
+ul{
+    padding-left: 5%;
+}
+
+
+hr{
+    background-color: black;
+    height: 5px;
+    margin: 0;
+    border: none;
+}
